@@ -36,10 +36,12 @@ if [ -z "$ZSH_NAME" ] && [ "$0" = "$THIS_SCRIPT" ]; then
 fi
 
 if [ -z "$OEROOT" ]; then
-    OEROOT=$(dirname "$THIS_SCRIPT")
+    OEROOT=$(dirname "$THIS_SCRIPT")/oeroot/
     OEROOT=$(readlink -f "$OEROOT")
 fi
 unset THIS_SCRIPT
+
+TEMPLATECONF="${TEMPLATECONF-../bb_core/conf/}"
 
 export OEROOT
 . $OEROOT/scripts/oe-buildenv-internal &&
