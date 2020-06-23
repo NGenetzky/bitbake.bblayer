@@ -1,0 +1,17 @@
+header:
+  version: 8
+
+env:
+  SHELL: bash
+
+# TODO: can we remove these?
+machine: qemux86-64
+distro: poky
+
+target: world
+
+repos:
+  bitbakebblayer:
+    layers:
+      bb_core:
+      bb_fetch:
