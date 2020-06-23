@@ -1,0 +1,9 @@
+*.pyc
+*.pyo
+*~
+pyshtables.py
+/build/
+*.swp
+tags
+*.sqlite
+venv/
